@@ -9,7 +9,7 @@ $color-tertiary: green;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    width: 70%;
+    margin: 20px;
     h1 {
         color: $color-tertiary;
         border-bottom: 1px solid $color-secondary;
@@ -17,7 +17,7 @@ $color-tertiary: green;
     section {
         display: flex;
         justify-content: center;
-        margin: 10px;
+        margin: 0px 10px 10px 10px;
 
         article {
             border: 1px solid $color-tertiary;
@@ -25,6 +25,8 @@ $color-tertiary: green;
 
             p {
                 padding: 10px;
+                font-size: 23px;
+                text-align: center;
             }
         }
         article:nth-child(even) {
