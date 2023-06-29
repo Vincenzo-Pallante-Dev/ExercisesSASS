@@ -24,13 +24,12 @@ div {
     h1 {
         color: green;
         border-bottom: 1px solid blue;
-        margin-top: 20px;
+        margin-top: 40px;
     }
     section {
         display: flex;
         justify-content: center;
         margin: 15px 10px 0px 10px;
-        width: 98%;
 
         article {
             p {
@@ -45,14 +44,17 @@ div {
             @include article-card(red);
         }
     }
-    #footer {
+    section:last-child {
         display: inline;
-        width: 98%;
+        width: 100%;
         margin-bottom: 10px;
+        padding: 0px 10px;
         article {
             @include article-card(green, $border-color: blue, $font-size: 24px);
-            padding: 30px;
-            max-width: 200ch;
+            padding: 30px 15px;
+            p {
+                padding: 0px;
+            }
         }
     }
 }
