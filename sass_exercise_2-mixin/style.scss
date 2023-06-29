@@ -1,0 +1,62 @@
+@use "sass:color";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@mixin article-card($color, $border-color: green, $font-size: 1rem) {
+    border: 1px solid $border-color;
+    font-size: $font-size;
+    color: $color;
+    padding: 10px;
+}
+
+
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
+    padding: 10px;
+    margin: 20px;
+    h1 {
+        color: green;
+        border-bottom: 1px solid blue;
+        margin-top: 20px;
+    }
+    section {
+        display: flex;
+        justify-content: center;
+        margin: 15px 10px 0px 10px;
+        max-width: 98.5%;
+
+        article {
+            p {
+                padding: 10px;
+                text-align: center;
+            }
+        }
+        article:nth-child(odd) {
+            @include article-card(blue);
+        }
+        article:nth-child(even) {
+            @include article-card(red);
+        }
+    }
+    #footer {
+        display: inline;
+        width: 98.5%;
+        margin-bottom: 5px;
+        article {
+            @include article-card(green, $border-color: blue, $font-size: 24px);
+            padding: 30px;
+            max-width: 200ch;
+        }
+    }
+}
+
+

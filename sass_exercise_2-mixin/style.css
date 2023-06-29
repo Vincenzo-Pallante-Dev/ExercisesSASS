@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid red;
+  padding: 10px;
+  margin: 20px;
+}
+div h1 {
+  color: green;
+  border-bottom: 1px solid blue;
+  margin-top: 20px;
+}
+div section {
+  display: flex;
+  justify-content: center;
+  margin: 15px 10px 0px 10px;
+  max-width: 98.5%;
+}
+div section article p {
+  padding: 10px;
+  text-align: center;
+}
+div section article:nth-child(odd) {
+  border: 1px solid green;
+  font-size: 1rem;
+  color: blue;
+  padding: 10px;
+}
+div section article:nth-child(even) {
+  border: 1px solid green;
+  font-size: 1rem;
+  color: red;
+  padding: 10px;
+}
+div #footer {
+  display: inline;
+  width: 98.5%;
+  margin-bottom: 5px;
+}
+div #footer article {
+  border: 1px solid blue;
+  font-size: 24px;
+  color: green;
+  padding: 10px;
+  padding: 30px;
+  max-width: 200ch;
+}/*# sourceMappingURL=style.css.map */
