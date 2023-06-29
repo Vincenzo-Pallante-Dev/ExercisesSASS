@@ -44,6 +44,7 @@ div {
             @include article-card(red);
         }
     }
+    
     section:last-child {
         display: inline;
         width: 100%;
