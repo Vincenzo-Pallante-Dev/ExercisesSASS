@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@function rem($value) {
+    $remValue: calc($value / 16) + rem;
+    @return $remValue;
+}
+
+@mixin article-card($color, $border-color: green, $font-size: rem(16)) {
+    border: rem(1) solid $border-color;
+    font-size: $font-size;
+    color: $color;
+    padding: rem(10);
+}
+
+.title {
+    color: green;
+    border-bottom: rem(1) solid blue;
+    margin-top: rem(40);
+}
+
+
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: rem(1) solid red;
+    padding-bottom: rem(5);
+    margin: rem(20);
+    & h1 {
+        @extend .title
+    }
+    & h2 {
+        @extend .title;
+        padding: rem(16);
+        border: rem(1) solid red;
+    }
+
+    & section {
+        display: flex;
+        justify-content: center;
+        margin: rem(15) rem(10) rem(0);
+
+        & article {
+            & p {
+                padding: rem(10);
+                text-align: center;
+            }
+        }
+        
+        & article:nth-child(odd) {
+            @include article-card(blue);
+        }
+        
+        & article:nth-child(even) {
+            @include article-card(red);
+        }
+    }
+
+    & section:last-child {
+        display: inline;
+        width: 100%;
+        margin-bottom: rem(10);
+        padding: rem(0) rem(10);
+        & article {
+            @include article-card(green, $border-color: blue, $font-size: rem(24));
+            padding: rem(30) rem(15);
+            & p {
+                padding: rem(0);
+            }
+        }
+    }
+}      
