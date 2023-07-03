@@ -36,28 +36,25 @@ div {
                 padding: 10px;
                 text-align: center;
             }
-        }
-        article:nth-child(odd) {
+            &:nth-child(odd) {
             @include article-card(blue);
-        }
-        article:nth-child(even) {
+            }
+            &:nth-child(even) {
             @include article-card(red);
+            }
         }
-    }
-    
-    section:last-child {
-        display: inline;
-        width: 100%;
-        margin-bottom: 10px;
-        padding: 0px 10px;
-        article {
-            @include article-card(green, $border-color: blue, $font-size: 24px);
-            padding: 30px 15px;
-            p {
-                padding: 0px;
+        &:last-child {
+            display: inline;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 0px 10px;
+            article {
+                @include article-card(green, $border-color: blue, $font-size: 24px);
+                padding: 30px 15px;
+                p {
+                    padding: 0px;
+                }
             }
         }
     }
 }
-
-
