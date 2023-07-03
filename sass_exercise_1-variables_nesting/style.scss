@@ -28,13 +28,14 @@ $color-tertiary: green;
                 font-size: 23px;
                 text-align: center;
             }
-        }
-        article:nth-child(even) {
-            color: $color-primary;
-        }
-        article:nth-child(odd) {
+            &:nth-child(even) {
+                color: $color-primary;
+            }
+            &:nth-child(odd) {
             color: $color-secondary;
+            }
         }
+        
     }
 
     }
